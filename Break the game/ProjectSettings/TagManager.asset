@@ -7,6 +7,8 @@ TagManager:
   - Cursor
   - Box
   - Ground
+  - Cursor_2
+  - Particle
   layers:
   - Default
   - TransparentFX
