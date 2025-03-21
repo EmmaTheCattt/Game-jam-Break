@@ -16,6 +16,7 @@ public class Cursorscript : MonoBehaviour
     public Vector2 CursorPos;
 
     public ParticleSystem Par;
+    public ParticleSystemRenderer Rend;
     public Animator Anime;
     public Collider2D Cus_col;
 
@@ -34,6 +35,7 @@ public class Cursorscript : MonoBehaviour
     private void Awake()
     {
         Par = GetComponentInChildren<ParticleSystem>();
+        Rend = GetComponentInChildren<ParticleSystemRenderer>();
         Anime = GetComponentInChildren<Animator>();
         Cus_col = GetComponentInChildren<Collider2D>();
         Cus_col.enabled = false;
@@ -43,6 +45,7 @@ public class Cursorscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Position_cursor();
         On_click();
         transform.position = CursorPos;
