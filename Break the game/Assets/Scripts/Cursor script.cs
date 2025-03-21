@@ -15,6 +15,9 @@ public class Cursorscript : MonoBehaviour
 
     public Vector2 CursorPos;
 
+    public Material box;
+    public Material Sky;
+
     public ParticleSystem Par;
     public ParticleSystemRenderer Rend;
     public Animator Anime;
@@ -36,6 +39,8 @@ public class Cursorscript : MonoBehaviour
     {
         Par = GetComponentInChildren<ParticleSystem>();
         Rend = GetComponentInChildren<ParticleSystemRenderer>();
+
+        Rend.material = Sky;
         Anime = GetComponentInChildren<Animator>();
         Cus_col = GetComponentInChildren<Collider2D>();
         Cus_col.enabled = false;
@@ -83,5 +88,13 @@ public class Cursorscript : MonoBehaviour
 
         CursorPos = new Vector2(Mouse_x, Mouse_y);
         CursorPos = Camera.main.ScreenToWorldPoint(CursorPos);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Box"))
+        {
+            Debug.Log("YOU ARE IN FACT HITTING THE BOX!!!");
+        }
     }
 }
