@@ -11,10 +11,13 @@ public class Cursorscript : MonoBehaviour
     // Start is called before the first frame update
     public float Mouse_x;
     public float Mouse_y;
+    public bool Particle;
 
     public Vector2 CursorPos;
 
     public ParticleSystem Par;
+    public Animator Anime;
+
     void Start()
     {
 
@@ -31,6 +34,7 @@ public class Cursorscript : MonoBehaviour
     private void Awake()
     {
         Par = GetComponentInChildren<ParticleSystem>();
+        Anime = GetComponentInChildren<Animator>();
         Particles_mouse_off();
     }
 
@@ -49,6 +53,16 @@ public class Cursorscript : MonoBehaviour
         {
             Par.enableEmission = true;
             Invoke("Particles_mouse_off", 0.1f);
+        }
+
+        if (Input.GetMouseButton(0)) {
+            Particle = true;
+            Anime.SetBool("Down", Particle);
+        }
+        else
+        {
+            Particle = false;
+            Anime.SetBool("Down", Particle);
         }
     }
 

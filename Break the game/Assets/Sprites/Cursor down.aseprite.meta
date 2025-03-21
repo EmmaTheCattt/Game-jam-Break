@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7a2fa03a296acf4ca47615d343944d9
+guid: 27532cc1b11fc0c4a9b990aeb553327b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638781786238564666
+  platformSettingsDirtyTick: 638781815043920625
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,7 +122,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Cursor
+  - name: Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
@@ -133,7 +133,7 @@ ScriptedImporter:
       y: 4
       width: 8
       height: 8
-    spriteID: 03fe94c9e9d43414994b99f153ba3e9b
+    spriteID: 2a8193962c6052c4eb6846490558050c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,7 +153,7 @@ ScriptedImporter:
       y: 20
       width: 8
       height: 8
-    spriteID: 8e5febc8f2842fa4bab6c71aa068cbd1
+    spriteID: 9f3a7ca433f19c24e9f8b9195bf423a7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -165,8 +165,8 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1353463600
-    name: Cursor
+    guid: -965632316
+    name: Cursor down
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -179,7 +179,7 @@ ScriptedImporter:
         y: 12
         width: 8
         height: 8
-      spriteId: 03fe94c9e9d43414994b99f153ba3e9b
+      spriteId: 2a8193962c6052c4eb6846490558050c
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -188,7 +188,7 @@ ScriptedImporter:
         y: 12
         width: 8
         height: 8
-      spriteId: 8e5febc8f2842fa4bab6c71aa068cbd1
+      spriteId: 9f3a7ca433f19c24e9f8b9195bf423a7
     linkedCells: []
     parentIndex: -1
   platformSettings:
