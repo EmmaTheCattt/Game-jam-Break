@@ -11,16 +11,16 @@ public class Cursorscript : MonoBehaviour
     // Start is called before the first frame update
     public float Mouse_x;
     public float Mouse_y;
-    public bool Particle;
+    public bool Fade;
 
     public Vector2 CursorPos;
 
     public ParticleSystem Par;
     public Animator Anime;
+    public Collider2D Cus_col;
 
     void Start()
     {
-
         UnityEngine.Cursor.visible = false;
         Mouse_x = Input.mousePosition.x;
         Mouse_y = Input.mousePosition.y;
@@ -35,6 +35,8 @@ public class Cursorscript : MonoBehaviour
     {
         Par = GetComponentInChildren<ParticleSystem>();
         Anime = GetComponentInChildren<Animator>();
+        Cus_col = GetComponentInChildren<Collider2D>();
+        Cus_col.enabled = false;
         Particles_mouse_off();
     }
 
@@ -48,21 +50,22 @@ public class Cursorscript : MonoBehaviour
 
     private void On_click()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
             Par.enableEmission = true;
+            Cus_col.enabled = true;
             Invoke("Particles_mouse_off", 0.1f);
         }
 
         if (Input.GetMouseButton(0)) {
-            Particle = true;
-            Anime.SetBool("Down", Particle);
+            Fade = true;
+            Anime.SetBool("Down", Fade);
         }
         else
         {
-            Particle = false;
-            Anime.SetBool("Down", Particle);
+            Fade = false;
+            Cus_col.enabled = false;
+            Anime.SetBool("Down", Fade);
         }
     }
 
