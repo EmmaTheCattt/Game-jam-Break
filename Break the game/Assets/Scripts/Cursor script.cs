@@ -31,6 +31,7 @@ public class Cursorscript : MonoBehaviour
     private void Awake()
     {
         Par = GetComponentInChildren<ParticleSystem>();
+        Particles_mouse_off();
     }
 
     // Update is called once per frame
@@ -43,12 +44,17 @@ public class Cursorscript : MonoBehaviour
 
     private void On_click()
     {
-        Par.enableEmission = false;
 
         if (Input.GetMouseButtonDown(0))
         {
             Par.enableEmission = true;
+            Invoke("Particles_mouse_off", 0.1f);
         }
+    }
+
+    private void Particles_mouse_off()
+    {
+        Par.enableEmission = false;
     }
     private void Position_cursor()
     {
