@@ -24,7 +24,7 @@ public class Could_spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (CloudNumber > 5)
+        while (CloudNumber < 5)
         {
             Invoke("Cloud_Spawn", 0.5f);
         }
@@ -32,7 +32,7 @@ public class Could_spawner : MonoBehaviour
 
     private void Cloud_Spawn()
     {
-        Instantiate(Cloud_1, transform.position, Quaternion.identity);
+        GameObject cloud = Instantiate(Cloud_1, transform.position, Quaternion.identity);
         CloudNumber++;
     }
 }
