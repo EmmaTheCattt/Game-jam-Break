@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcdfe999467b9bb4e857e8410817b1e2
+guid: f9d7301d2cd379c4191d24f8ba2e467d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638782650058757627
+  platformSettingsDirtyTick: 638782648804071741
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Bush_1
+  - name: Mountain 4
     originalName: 
-    pivot: {x: 0.5, y: 0.8}
+    pivot: {x: 0.5, y: 0.5714286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 36
-      height: 10
-    spriteID: b1536b12e1ad58349a4f6eae71aa791e
+      width: 42
+      height: 70
+    spriteID: 79bee70f21d3f6a468b4af93cbee5fb5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,21 +145,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 548905080
-    name: Bush_1
+    guid: 1934986203
+    name: Mountain 4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Bush_1
+    - name: Mountain 4
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 6
+        x: 3
         y: 0
-        width: 36
-        height: 10
-      spriteId: b1536b12e1ad58349a4f6eae71aa791e
+        width: 42
+        height: 70
+      spriteId: 79bee70f21d3f6a468b4af93cbee5fb5
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -202,5 +202,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 16}
-  previousTextureSize: {x: 64, y: 32}
+  canvasSize: {x: 48, y: 80}
+  previousTextureSize: {x: 64, y: 128}
