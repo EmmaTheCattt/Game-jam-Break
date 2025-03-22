@@ -14,7 +14,7 @@ public class Cloud_logic : MonoBehaviour
     void Start()
     {
         Cloud_transform = GetComponent<Transform>();
-        speed = Random.Range(-1f, -2f);
+        speed = Random.Range(-0.5f, -1.5f);
         size = Random.Range(-0.25f, 0.25f);
         Cloud_transform.localScale = new Vector2(1 + size, 1 + size);
 
