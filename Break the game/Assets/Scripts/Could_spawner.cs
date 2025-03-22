@@ -13,14 +13,18 @@ public class Could_spawner : MonoBehaviour
     [SerializeField]
     public GameObject[] clouds;
 
+    public GameObject End;
+
     public Vector2 CloudSpawn;
     public float Cloud_y;
+    public int Randomindex;
 
     static int CloudNumber = 0;
     
     // Start is called before the first frame update
     void Start()
     {
+        Randomindex = Random.Range(-1, clouds.Length);
         InvokeRepeating("Spawn_cloud", 2, 1);
     }
 
@@ -32,10 +36,11 @@ public class Could_spawner : MonoBehaviour
 
     private void Spawn_cloud()
     {
+        Randomindex = Random.Range(0, clouds.Length);
         Cloud_y = Random.Range(-4f, 4f);
         CloudSpawn = new Vector2(transform.position.x, transform.position.y + Cloud_y);
 
-        GameObject cloud = Instantiate(Cloud_1, CloudSpawn, Quaternion.identity);
+        GameObject cloud = Instantiate(clouds[Randomindex], CloudSpawn, Quaternion.identity);
         CloudNumber++;
     }
 }
