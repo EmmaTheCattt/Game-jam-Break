@@ -63,6 +63,12 @@ TagManager:
   - name: Platform
     uniqueID: 1803762583
     locked: 0
+  - name: Front plat
+    uniqueID: 2254837125
+    locked: 0
+  - name: Portal
+    uniqueID: 2524781611
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
