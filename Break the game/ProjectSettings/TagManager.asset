@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Cursor_2
   - Particle
+  - end
   layers:
   - Default
   - TransparentFX

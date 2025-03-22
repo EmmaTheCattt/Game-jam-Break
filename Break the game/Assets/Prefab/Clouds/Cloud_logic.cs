@@ -7,6 +7,7 @@ using static Unity.Collections.AllocatorManager;
 public class Cloud_logic : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject end;
 
     public Vector3 movement;
     public Transform Cloud_transform;
@@ -30,7 +31,8 @@ public class Cloud_logic : MonoBehaviour
 
         movement = new Vector3(speed, 0, 0);
         Invoke("Clouds_death", 20f);
-        
+
+        end = GameObject.FindGameObjectWithTag("end");
     }
 
     // Update is called once per frame
@@ -39,6 +41,8 @@ public class Cloud_logic : MonoBehaviour
         transform.position += movement * Time.deltaTime;
         C.a = alpha;
         SR.material.color = C;
+
+        if (transform.position.x < )
     }
 
     private void Clouds_death()
