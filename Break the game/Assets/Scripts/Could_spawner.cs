@@ -18,19 +18,21 @@ public class Could_spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("Spawn_cloud", 2, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (CloudNumber < 5)
-        {
-            Cloud_y = Random.Range(-4f, 4f);
-            CloudSpawn = new Vector2(transform.position.x, transform.position.y + Cloud_y);
+        
+    }
 
-            GameObject cloud = Instantiate(Cloud_1, CloudSpawn, Quaternion.identity);
-            CloudNumber++;
-        }
+    private void Spawn_cloud()
+    {
+        Cloud_y = Random.Range(-4f, 4f);
+        CloudSpawn = new Vector2(transform.position.x, transform.position.y + Cloud_y);
+
+        GameObject cloud = Instantiate(Cloud_1, CloudSpawn, Quaternion.identity);
+        CloudNumber++;
     }
 }
