@@ -20,17 +20,17 @@ public class Cloud_logic : MonoBehaviour
         Cloud_transform.localScale = new Vector2(1 + size, 1 + size);
 
         movement = new Vector3(speed, 0, 0);
+        Invoke("Clouds_death", 20f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = +Time.deltaTime;
         transform.position += movement * Time.deltaTime;
+    }
 
-        if (time > Death_time)
-        {
-            Destroy(gameObject);
-        }
+    private void Clouds_death()
+    {
+        Destroy(gameObject);
     }
 }
