@@ -58,6 +58,7 @@ public class Cloud_logic : MonoBehaviour
     private void Fast_fade()
     {
         alpha -= 0.025f;
+        Clouds_death();
     }
 
     private void OnTriggerExit2D(Collider2D other)
