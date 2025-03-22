@@ -26,7 +26,9 @@ public class Could_spawner : MonoBehaviour
     {
         while (CloudNumber < 5)
         {
-            GameObject cloud = Instantiate(Cloud_1, transform.position, Quaternion.identity);
+            Cloud_y = Random.Range(-5f, 5f);
+            CloudSpawn = new Vector2(transform.position.x, transform.position.y + Cloud_y);
+            GameObject cloud = Instantiate(Cloud_1, CloudSpawn, Quaternion.identity);
             CloudNumber++;
         }
     }
