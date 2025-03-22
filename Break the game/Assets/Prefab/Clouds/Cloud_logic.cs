@@ -10,13 +10,12 @@ public class Cloud_logic : MonoBehaviour
     public Transform Cloud_transform;
     public float speed;
     public float size;
-    private float Death_time = 15;
     public float time = 0;
     void Start()
     {
         Cloud_transform = GetComponent<Transform>();
-        speed = Random.Range(-1f, -2.5f);
-        size = Random.Range(-0.2f, 0.2f);
+        speed = Random.Range(-1f, -2f);
+        size = Random.Range(-0.25f, 0.25f);
         Cloud_transform.localScale = new Vector2(1 + size, 1 + size);
 
         movement = new Vector3(speed, 0, 0);
