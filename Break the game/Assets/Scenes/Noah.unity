@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 874072311}
   - component: {fileID: 874072310}
   m_Layer: 6
-  m_Name: TestingGround (1)
+  m_Name: Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,7 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eeef7da4d4dd0249a44ba00f31eef62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 17
+  moveSpeed: 10
+  jumpHeight: 17
   coyoteTime: 0
   groundLayer:
     serializedVersion: 2

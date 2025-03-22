@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpHeight;
     [SerializeField] private float coyoteTime;
+    private bool canDoubleJump;
     [SerializeField] private LayerMask groundLayer;
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
@@ -25,7 +27,9 @@ public class PlayerController : MonoBehaviour
         // Horizontal and vertical movement according to input
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y);
 
-        if ((Input.GetAxis("Vertical") > 0.3 || Input.GetButton("Jump")) && isGrounded())
+
+        // Check Jump input
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Vertical") > 0.3)
         {
             Jump();
         }
@@ -33,8 +37,12 @@ public class PlayerController : MonoBehaviour
 
     // Player functions
     private void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
+    {   
+        if (isGrounded())
+        {
+            canDoubleJump = true;
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        }
     }
 
     private bool isGrounded()
