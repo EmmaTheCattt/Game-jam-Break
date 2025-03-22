@@ -10,6 +10,9 @@ public class Could_spawner : MonoBehaviour
     public GameObject Cloud_4;
     public GameObject Cloud_5;
 
+    [SerializeField]
+    public GameObject[] clouds;
+
     public Vector2 CloudSpawn;
     public float Cloud_y;
 
