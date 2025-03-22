@@ -124,15 +124,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Tileset game world
     originalName: 
-    pivot: {x: 0.5839416, y: -0.6}
+    pivot: {x: 0.50955415, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 137
-      height: 80
+      width: 157
+      height: 128
     spriteID: eeda5ce87023b5d42ae854fc9c687b2b
     spriteBone: []
     spriteOutline: []
@@ -156,9 +156,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 48
-        width: 137
-        height: 80
+        y: 0
+        width: 157
+        height: 128
       spriteId: eeda5ce87023b5d42ae854fc9c687b2b
     linkedCells: []
     parentIndex: -1
@@ -203,4 +203,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 160, y: 128}
-  previousTextureSize: {x: 256, y: 128}
+  previousTextureSize: {x: 256, y: 256}
