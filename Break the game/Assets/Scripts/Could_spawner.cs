@@ -25,6 +25,7 @@ public class Could_spawner : MonoBehaviour
     void Start()
     {
         Randomindex = Random.Range(-1, clouds.Length);
+        Spawn_cloud();
         InvokeRepeating("Spawn_cloud", 2, 1);
     }
 
@@ -37,7 +38,7 @@ public class Could_spawner : MonoBehaviour
     private void Spawn_cloud()
     {
         Randomindex = Random.Range(0, clouds.Length);
-        Cloud_y = Random.Range(-6f, 2.5f);
+        Cloud_y = Random.Range(-5f, 2.5f);
         CloudSpawn = new Vector2(transform.position.x, transform.position.y + Cloud_y);
 
         GameObject cloud = Instantiate(clouds[Randomindex], CloudSpawn, Quaternion.identity);

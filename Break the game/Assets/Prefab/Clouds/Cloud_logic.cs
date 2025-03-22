@@ -42,7 +42,10 @@ public class Cloud_logic : MonoBehaviour
         C.a = alpha;
         SR.material.color = C;
 
-        if (transform.position.x < )
+        if (transform.position.x < end.transform.position.x)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Clouds_death()

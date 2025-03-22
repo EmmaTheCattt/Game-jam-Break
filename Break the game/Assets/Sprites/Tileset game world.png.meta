@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 16384
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 2
     compressionQuality: 100
@@ -82,14 +82,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -541,7 +541,7 @@ TextureImporter:
       name: Tileset game world_21
       rect:
         serializedVersion: 2
-        x: 112
+        x: 113
         y: 64
         width: 16
         height: 16
@@ -667,7 +667,7 @@ TextureImporter:
       name: Tileset game world_27
       rect:
         serializedVersion: 2
-        x: 112
+        x: 113
         y: 48
         width: 16
         height: 16
@@ -751,7 +751,7 @@ TextureImporter:
       name: Tileset game world_31
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 32
         width: 16
         height: 16
@@ -856,7 +856,7 @@ TextureImporter:
       name: Tileset game world_36
       rect:
         serializedVersion: 2
-        x: 112
+        x: 113
         y: 32
         width: 16
         height: 16
@@ -940,7 +940,7 @@ TextureImporter:
       name: Tileset game world_40
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 16
         width: 16
         height: 16
@@ -1066,7 +1066,7 @@ TextureImporter:
       name: Tileset game world_46
       rect:
         serializedVersion: 2
-        x: 112
+        x: 113
         y: 16
         width: 16
         height: 16
@@ -1150,7 +1150,7 @@ TextureImporter:
       name: Tileset game world_50
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 0
         width: 16
         height: 16
@@ -1276,7 +1276,7 @@ TextureImporter:
       name: Tileset game world_56
       rect:
         serializedVersion: 2
-        x: 112
+        x: 113
         y: 0
         width: 16
         height: 16
