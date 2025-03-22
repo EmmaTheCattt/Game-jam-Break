@@ -48,6 +48,9 @@ TagManager:
   - name: Should not be seen
     uniqueID: 1442532733
     locked: 0
+  - name: Sky
+    uniqueID: 405381417
+    locked: 0
   - name: Distant
     uniqueID: 1074798941
     locked: 0
