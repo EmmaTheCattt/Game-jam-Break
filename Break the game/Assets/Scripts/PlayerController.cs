@@ -6,13 +6,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float coyoteTime;
+    [SerializeField] private LayerMask groundLayer;
+    private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
-    private bool grounded;
+
     
     // Executes on startup
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     
     // Updates every frame
@@ -21,26 +25,22 @@ public class PlayerController : MonoBehaviour
         // Horizontal and vertical movement according to input
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y);
 
-        if ((Input.GetAxis("Vertical") > 0.3 || Input.GetButton("Jump")) && grounded)
+        if ((Input.GetAxis("Vertical") > 0.3 || Input.GetButton("Jump")) && isGrounded())
         {
             Jump();
         }
-        
-        // Sprite update
-        
     }
+
+    // Player functions
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
-        grounded = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private bool isGrounded()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            grounded = true;
-        }
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
     }
 }
 
