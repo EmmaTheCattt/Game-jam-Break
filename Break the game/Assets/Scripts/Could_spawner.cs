@@ -13,7 +13,8 @@ public class Could_spawner : MonoBehaviour
     [SerializeField]
     public GameObject[] clouds;
 
-    public GameObject End;
+    public GameObject player;
+    public GameObject end;
 
     public Vector2 CloudSpawn;
     public float Cloud_y;
@@ -24,6 +25,8 @@ public class Could_spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        end = GameObject.FindGameObjectWithTag("end");
         Randomindex = Random.Range(-1, clouds.Length);
         Spawn_cloud();
         InvokeRepeating("Spawn_cloud", 0, 1.5f);
