@@ -388,6 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714491850}
+  - component: {fileID: 1714491851}
   m_Layer: 0
   m_Name: Could spawner
   m_TagString: Untagged
@@ -411,6 +412,25 @@ Transform:
   - {fileID: 2031035125}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714491851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714491849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ab6fbe466dc194d9f6d3efcb70e56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cloud_1: {fileID: 1640566980603715740, guid: 7194e901a0ebcc34984dcc6dcdb77edc, type: 3}
+  Cloud_2: {fileID: 6651503970898250436, guid: 3187518430bbc824eb3aa4e824cae120, type: 3}
+  Cloud_3: {fileID: 5661420920234968298, guid: 70826de6b202d0e4e8d7db23fdfc5735, type: 3}
+  Cloud_4: {fileID: 1597291032964135727, guid: b85643d8f6461e0409f4b7e53605bcb7, type: 3}
+  Cloud_5: {fileID: 3604498302157818188, guid: d4fabd8d8a1d99346a44541d65fb442b, type: 3}
+  CloudSpawn: {x: 0, y: 0}
+  Cloud_y: 0
 --- !u!1001 &2031035124
 PrefabInstance:
   m_ObjectHideFlags: 0

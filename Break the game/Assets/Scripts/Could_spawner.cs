@@ -26,13 +26,8 @@ public class Could_spawner : MonoBehaviour
     {
         while (CloudNumber < 5)
         {
-            Invoke("Cloud_Spawn", 0.5f);
+            GameObject cloud = Instantiate(Cloud_1, transform.position, Quaternion.identity);
+            CloudNumber++;
         }
-    }
-
-    private void Cloud_Spawn()
-    {
-        GameObject cloud = Instantiate(Cloud_1, transform.position, Quaternion.identity);
-        CloudNumber++;
     }
 }
