@@ -10,7 +10,7 @@ public class Cloud_logic : MonoBehaviour
     public Transform Cloud_transform;
     public float speed;
     public float size;
-    public float Death_time = 10;
+    public float Death_time = 15;
     public float time = 0;
     void Start()
     {
@@ -25,7 +25,7 @@ public class Cloud_logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time = +Time.time;
+        time =+ Time.time;
         transform.position += movement * Time.deltaTime;
 
         if (time > Death_time)
