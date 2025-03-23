@@ -24,14 +24,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
+    private SpriteRenderer SR;
+    private ParticleSystem PS;
     private float horizontalInput;
 
     
     // Executes on startup
     private void Awake()
     {
+        SR = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+
+        PS = GetComponentInChildren<ParticleSystem>();
+        PS.enableEmission = false;
     }
     
     // Updates every frame
@@ -44,10 +50,12 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput > 0.01f)
         {
             transform.localScale = Vector3.one;
+            SR.flipX = false;
         }
         else if (horizontalInput < -0.01f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+            SR.flipX = true;
         }
 
         // Check Jump input
@@ -107,6 +115,8 @@ public class PlayerController : MonoBehaviour
                 {
                     rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
                     jumpCounter--;
+                    PS.enableEmission = true;
+                    Invoke("Particles_mouse_off", 0.05f);
                 }
             }
             // Reset coyoteCounter
@@ -124,4 +134,19 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
+
+    private void Particles_mouse_off()
+    {
+        PS.enableEmission = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Death"))
+        {
+            Debug.Log("Death");
+        }
+    }
+
+
 }
