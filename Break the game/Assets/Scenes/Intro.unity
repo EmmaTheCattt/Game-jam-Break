@@ -415,9 +415,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 254709928}
   Starting_lines:
-  - Heyyyy >w<
-  - 
-  textspeed: 0.3
+  - '*After chasing the god into the portal you get a sense of determination.*'
+  - No matter how stupid or dumb it might be...
+  - "You are not gonna bow down to D\u0338\u030D\u0305\u0340\u0344\u0347\u0348\u0347\u0316\u0329\u0325\u032B\u0317\u0326a\u0337\u034C\u0303\u034C\u034A\u0319\u0329\u0353\u033B\u0327\u0323\u0356\u0331\u0330\u0330\u031Fv\u0336\u0351\u0344\u0344\u0308\u030E\u0360\u030C\u0307\u034B\u0312\u030D\u035B\u0315\u0330\u035C\u0348\u0318\u033A\u034E\u0320\u033B\u033Be\u0337\u0346\u0351\u0350\u034B\u0312\u0352\u034A\u033E\u0351\u0311\u0305\u035D"
+  - That slice of pizza was atleast 30 cents!!!
+  - You will get that slice back!!!
+  - '*a small light flickers in the distance.*'
+  textspeed: 0.1
 --- !u!1 &1846935287
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +616,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1994147038
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171309562051632786, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845169255957056322, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
+      propertyPath: m_Name
+      value: Cursor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7889d47280e7d0489f5d9904dfd3626, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -619,3 +680,4 @@ SceneRoots:
   - {fileID: 1846935290}
   - {fileID: 1969978323}
   - {fileID: 963949318}
+  - {fileID: 1994147038}
