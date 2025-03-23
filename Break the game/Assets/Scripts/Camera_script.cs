@@ -33,12 +33,10 @@ public class Camera_script : MonoBehaviour
         if (player.transform.position.x <= end.transform.position.x + offset)
         {
             Camera_new_x = end.transform.position.x + offset;
-            Camera_pos = new Vector3(end.transform.position.x + offset, camera_y, -1);
         }
         else
         {
             Camera_new_x = player.transform.position.x;
-            Camera_pos = new Vector3(player.transform.position.x, camera_y, -1);
         }
 
         //y
