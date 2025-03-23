@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
                     jumpCounter--;
                     PS.enableEmission = true;
-                    Invoke("Particles_mouse_off", 0.05f);
+                    Invoke("Particles_mouse_off", 0.025f);
                 }
             }
             // Reset coyoteCounter
